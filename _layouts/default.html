@@ -18,11 +18,22 @@
   <body>
     <header>
       <div class="inner">
+        
+        <h1>CPS'S Learning Blog</h1>
+        <!--
         <a href="{{ '/' | absolute_url }}">
           <h1>{{ site.title | default: site.github.repository_name }}</h1>
         </a>
+        -->
         
-        <h2> Learner's Station</h>
+        <h2>{{ site.description | default: site.github.project_tagline }}</h2>
+       
+        {% if site.github.is_project_page %}
+          <a href="About" class="button"><small>View project on</small> GitHub</a>
+        {% endif %}
+        
+        
+        
         
          <!--
         <h2>{{ site.description | default: site.github.project_tagline }}</h2>
